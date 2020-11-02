@@ -30,7 +30,7 @@ def vercheck() -> str:
     return str(VERSION)
 
 HELP_STRINGS = HELP_PANEL_STRING.HELP.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
-INTRO_TXT = os.environ.get('INTRO_TXT', None)
+
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -141,9 +141,9 @@ def send_start(bot, update):
         pass
     chat = update.effective_chat  # type: Optional[Chat]
     first_name = update.effective_user.first_name
-    text = "𝐇𝐞𝐲 *{https://telegra.ph/file/b2fb8a43876cca3f454da.jpg}* 𝒂𝒅𝒅 𝒎𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒈𝒓𝒐𝒖𝒑"
-    text += "\n𝙸𝚊𝚖 {My name is ⫷ ⨳ꋬꉔꉔꋬ꒒꒐ꋬ⨳ ⫸!!} 𝚊𝚗 𝚙𝚛𝚘𝚏𝚏𝚎𝚜𝚜𝚒𝚘𝚗𝚊𝚕 𝚋𝚘𝚝"
-    text += "\n𝗝𝗼𝗶𝗻 I'm maintained by this person𝗡[✦҈͜͡➳ᏗᎮ๏ɭɭ๏✦҈͜͡➳](https://t.me/ApolloOfficial)" 
+    text = "𝐇𝐞𝐲 *{}* 𝒂𝒅𝒅 𝒎𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒈𝒓𝒐𝒖𝒑"
+    text += "\n𝙸𝚊𝚖 {  !!} 𝚊𝚗 𝚙𝚛𝚘𝚏𝚏𝚎𝚜𝚜𝚒𝚘𝚗𝚊𝚕 𝚋𝚘𝚝"
+    text += "\n𝗝𝗼𝗶𝗻𝗡[       ](https://t.me/ApolloOfficial)" 
     text += "\n\n «*{}*»"  
 
     keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨",url="https://t.me/BlazingSquad")]]
