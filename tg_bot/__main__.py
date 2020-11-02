@@ -141,13 +141,13 @@ def send_start(bot, update):
         pass
     chat = update.effective_chat  # type: Optional[Chat]
     first_name = update.effective_user.first_name
-    text = "𝐇𝐞𝐲 *{}* 𝒂𝒅𝒅 𝒎𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒈𝒓𝒐𝒖𝒑"
-    text += "\n𝙸𝚊𝚖 {} 𝚊𝚗 𝚙𝚛𝚘𝚏𝚏𝚎𝚜𝚜𝚒𝚘𝚗𝚊𝚕 𝚋𝚘𝚝"
-    text += "\n𝗝𝗼𝗶𝗻 [𝗡𝗲𝘄𝘀 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝗙𝗼𝗿 𝘂𝗽𝗱𝗮𝘁𝗲𝘀 𝗮𝗯𝗼𝘂𝘁 𝗺𝗲](https://t.me/BlazingSquad)" 
-    text += "\n\n «*{INTRO_TXT}*»"  
+    text = "𝐇𝐞𝐲 *{https://telegra.ph/file/b2fb8a43876cca3f454da.jpg}* 𝒂𝒅𝒅 𝒎𝒆 𝒕𝒐 𝒚𝒐𝒖𝒓 𝒈𝒓𝒐𝒖𝒑"
+    text += "\n𝙸𝚊𝚖 {My name is ⫷ ⨳ꋬꉔꉔꋬ꒒꒐ꋬ⨳ ⫸!!} 𝚊𝚗 𝚙𝚛𝚘𝚏𝚏𝚎𝚜𝚜𝚒𝚘𝚗𝚊𝚕 𝚋𝚘𝚝"
+    text += "\n𝗝𝗼𝗶𝗻 I'm maintained by this person𝗡[✦҈͜͡➳ᏗᎮ๏ɭɭ๏✦҈͜͡➳](https://t.me/ApolloOfficial)" 
+    text += "\n\n «*{}*»"  
 
     keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨",url="https://t.me/BlazingSquad")]]
-    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username)),InlineKeyboardButton(text="♻️Owner",url="https://t.me/jrjaiden")]]
+    keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username)),InlineKeyboardButton(text="♻️Owner",url="https://t.me/ApolloOfficial")]]
 
     update.effective_message.reply_photo(HELP_PANEL_STRING.INTRO_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name)), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
