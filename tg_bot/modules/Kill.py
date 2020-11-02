@@ -48,7 +48,7 @@ def q(bot: Bot, update: Update):
       message.reply_text(random.choice(SFW_STRINGS))
 
 __help__ = """
-- /q  😩
+- /kill  😩
 """
 
 __mod_name__ = "Killing Commands"
