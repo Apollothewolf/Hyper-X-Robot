@@ -146,7 +146,7 @@ def send_start(bot, update):
     text += "\n𝗝𝗼𝗶𝗻𝗡[       ](https://t.me/ApolloOfficial)" 
     text += "\n\n «*{}*»"  
 
-    keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨",url="https://t.me/BlazingSquad")]]
+    keyboard = [[InlineKeyboardButton(text="✨Help", callback_data="help_back"),InlineKeyboardButton(text="✨Support✨",url="https://t.me/ApolloOfficial")]]
     keyboard += [[InlineKeyboardButton(text="⚡Add Me",url="t.me/{}?startgroup=true".format(bot.username)),InlineKeyboardButton(text="♻️Owner",url="https://t.me/ApolloOfficial")]]
 
     update.effective_message.reply_photo(HELP_PANEL_STRING.INTRO_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name)), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
@@ -246,7 +246,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="✨Help",url="t.me/{}?start=help".format(bot.username)),
-                                                InlineKeyboardButton(text="💫Support",url="https://t.me/BlazingSquad")]]))
+                                                InlineKeyboardButton(text="💫Support",url="https://t.me/ApolloOfficial")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
